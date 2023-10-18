@@ -46,4 +46,10 @@ public class Produto
     [Display(Name = "Dimensões")]
     [StringLength(20, ErrorMessage = "A Dimensão deve possuir no máximo 20 caracteres")]
     public decimal Dimensao { get; set; }
+
+    public ICollection<ProdutoAvaliacao> Avaliacoes { get; set; }
+    public ICollection<ProdutoCategoria> Categorias { get; set; }
+    public ICollection<ProdutoTag> Tags { get; set; }
+    public ICollection<ListaDesejo> ListaDesejos { get; set; }
+    public ICollection<ProdutoEstoque> Estoques { get; set; }
 }
